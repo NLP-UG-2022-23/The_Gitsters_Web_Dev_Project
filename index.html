@@ -3,23 +3,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Tripple Pro - translation tool">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="./styles.css">
         <title>Tripple Pro - translation tool</title>
     </head>
     <body>
         <nav id="navbar">
-            <!-- <a href="#home"><img src="page_title.png" alt="logo"></a> -->
             <a href="#home"><img src="page_title.png" alt="logo" class="logo"></a>
+            <button class="hamburger">☰</button>
             <a href="#home">home</a>
             <a href="#tool">translator</a>
             <a href="#about-us">about us</a>
-            <a href="#about-the-tool">about the tool</a>
+            <a href="#about-the-tool-h1">about the tool</a>
         </nav>
  <div id="mySidenav" class="sidenav">
   <div id="about"><button id="btn" onclick="darkMode()">Dark mode</button></div>
 </div>
         <section id="home" class="home">
-            <img src="logo.jpg" alt="test image">  
+            <img src="logo.jpg" alt="test image" class="logo2">  
             <a href="#tool">TRY ME !</a>
         </section>
 
@@ -38,7 +40,7 @@
         </section>
 
         <section id="about-the-tool" class="about-the-tool">
-            <h1>ABOUT THE TOOL</h1>
+            <h1 id="about-the-tool-h1">ABOUT THE TOOL</h1>
             <p>
                 Our project features a powerful translation tool designed to provide users with a comprehensive and insightful translation experience. Utilizing the capabilities of three different APIs from established translation services, our tool offers users the opportunity to compare translations from multiple sources simultaneously.
             </p>
@@ -70,6 +72,7 @@
             <p id="feedback">
                 Join us on this journey as we continue to innovate and redefine the translation experience for users worldwide. 
                 <br>We are open to your feedback!
+                <br>
             </p>
         </section>
         <script src="script.js"></script>
@@ -78,44 +81,14 @@
     <!-- Footer insipired by https://codepen.io/alvarotrigo/pen/vYRRxje -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>company</h4>
-                    <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">affiliate program</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>get help</h4>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">shipping</a></li>
-                        <li><a href="#">returns</a></li>
-                        <li><a href="#">order status</a></li>
-                        <li><a href="#">payment options</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>online shop</h4>
-                    <ul>
-                        <li><a href="#">watch</a></li>
-                        <li><a href="#">bag</a></li>
-                        <li><a href="#">shoes</a></li>
-                        <li><a href="#">dress</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+            <div class="footer-col">
+                <h4>Discover more</h4>
+                <ul>
+                    <li><a href="#about-us">about us</a></li>
+                    <li><a href="#about-the-tool">about the tool</a></li>
+                    <li><a href="https://translate.google.com/">Google translate</a></li>
+                    <li><a href="https://github.com/NLP-UG-2022-23/The_Gitsters_Web_Dev_Project"><i class="fab fa-github"></i> GitHub</a></li>
+                </ul>
             </div>
         </div>
    </footer>
