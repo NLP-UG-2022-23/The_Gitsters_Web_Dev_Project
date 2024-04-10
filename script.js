@@ -23,25 +23,22 @@
         });
 
         
-        let lastScrollTop = 0; // Keep track of the last scroll position
+        let lastScrollTop = 0;
 
         window.addEventListener("scroll", function() {
             let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
         
-            // Only apply the behavior for screens 768px wide or less
+            
             if (window.matchMedia("(max-width: 768px)").matches) {
                 if (currentScroll > lastScrollTop) {
-                    // Scrolling down
-                    document.getElementById("navbar").style.top = "-100%"; // Adjust this value based on your navbar's height
+                    document.getElementById("navbar").style.top = "-100%";
                 } else {
-                    // Scrolling up
                     document.getElementById("navbar").style.top = "0";
                 }
             } else {
-                // Optional: Reset navbar position for wider screens in case it's been hidden
                 document.getElementById("navbar").style.top = "0";
             }
         
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         }, false);
         
