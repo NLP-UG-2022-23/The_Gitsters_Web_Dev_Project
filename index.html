@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <link rel="stylesheet" type="text/css" href="./styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <title>Tripple Pro - translation tool</title>
     </head>
     <body>
@@ -26,17 +28,62 @@
         </section>
 
         <section id="tool" class="tool">
-            <h1>Translator</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis urna turpis, dignissim varius mollis vel, ultricies sit amet diam. Nullam pellentesque egestas accumsan. Fusce arcu dolor, interdum eu pellentesque at, malesuada elementum arcu. Quisque molestie augue vel maximus consequat. Donec ligula justo, tincidunt vel tincidunt vitae, mattis id eros. Nunc sed ipsum congue, tempus turpis id, venenatis justo. Ut et augue ultrices, fringilla nisl at, laoreet enim. Quisque varius scelerisque eros eu auctor. Etiam id fermentum nisl, vitae condimentum turpis. Phasellus vitae risus aliquam, condimentum libero id, pharetra risus. Donec nec quam sem. Donec a orci non ex dapibus ullamcorper. Pellentesque aliquam eros lorem, placerat semper neque convallis eget.
 
-                Etiam convallis dui vel purus molestie tempus. Aliquam eu neque interdum, hendrerit orci et, laoreet neque. Etiam auctor vel orci ac facilisis. Mauris congue nec ante consectetur varius. Donec porta lorem leo, at mattis tortor hendrerit eu. Suspendisse sapien tortor, iaculis id vehicula non, acwcumsan vitae nulla. Proin in tincidunt magna. Integer dignissim posuere suscipit. Vestibulum elementum dapibus arcu, a elementum dolor tristique a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent placerat cursus turpis, sed finibus eros hendrerit nec. Sed elementum erat sit amet est finibus convallis. Pellentesque turpis elit, ullamcorper vel molestie ac, ullamcorper sed nibh. Vivamus imperdiet placerat nunc ut tempor. Nunc quis sem id arcu ornare consectetur. </p>
-        </section>
+            <h1 style="text-align: center;">Translation Tool</h1>
+        
+            <div class="container">
+                <form id="translationForm">
+                    <label for="textInput">Enter text to translate:</label><br>
+                    <textarea id="textInput" name="textInput" rows="15" cols="100"></textarea><br>
+                    <input type="submit" value="Translate" id="submit-button">
+                </form>
+                <div class="translation-header">Translation 1</div>
+                <div class="output" id="output1">
+                    <p id="translationOutput1"></p>
+                </div>
+        
+                <div class="translation-header">Translation 2</div>
+                <div class="output" id="output2">
+                    <p id="translationOutput2"></p>
+                </div>
+        
+                <div class="translation-header">Translation 3</div>
+                <div class="output" id="output3">
+                    <p id="translationOutput3"></p>
+                </div>
+            </div>
+            </section>
         
         <section id="about-us" class="about-us">
-            <h1>About us</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elwit. Duis urna turpis, dignissim varius mollis vel, ultricies sit amet diam. Nullam pellentesque egestas accumsan. Fusce arcu dolor, interdum eu pellentesque at, malesuada elementum arcu. Quisque molestie augue vel maximus consequat. Donec ligula justo, tincidunt vel tincidunt vitae, mattis id eros. Nunc sed ipsum congue, tempus turpis id, venenatis justo. Ut et augue ultrices, fringilla nisl at, laoreet enim. Quisque varius scelerisque eros eu auctor. Etiam id fermentum nisl, vitae condimentum turpis. Phasellus vitae risus aliquam, condimentum libero id, pharetra risus. Donec nec quam sem. Donec a orci non ex dapibus ullamcorper. Pellentesque aliquam eros lorem, placerat semper neque convallis eget.
+            <h1 id="about-us-h1">About us</h1>
+            <p><br>Hi! It's Tomek, Staś and Borys.
+                
+                <br>We are a group of enthusiastic learners diving into the world of Natural Language Processing (NLP) with a thirst for knowledge and a hunger for growth.
+                <br>Despite being beginners, we are fueled by our passion for technology and our eagerness to explore the exciting world of NLP.
+                <br>Individually, we come from diverse backgrounds, with different levels of experience in computer science, linguistics, and data analysis. 
+                <br>However, what unites us is our shared commitment to continuous learning and our willingness to embrace challenges head-on.
+                <br>As beginners on this journey, we understand that we have a lot to learn, and we approach each obstacle with humility and determination. 
+                <br>Every line of code, every experiment, and every setback is an opportunity for growth and discovery.
+                
+                <br>Through our collaborative efforts, we aim to not only develop technical proficiency but also cultivate a deep understanding of the principles and possibilities of NLP. 
+                <br>We believe that our journey as beginners in NLP is just the beginning, and we are excited to see where our collective curiosity and determination will lead us.
+                <h3 id="contact"><strong>Questions, suggestions, comments? <br>Don't hesitate to contact us!</strong></h3>
 
-                Etiam convallis dui vel purus molestie tempus. Aliquam eu neque interdum, hendrerit orci et, laoreet neque. Etiam auctor vel orci ac facilisis. Mauris congue nec ante consectetur varius. Donec porta lorem leo, at mattis tortor hendrerit eu. Suspendisse sapien tortor, iaculis id vehicula non, accumsan vitae nulla. Proin in tincidunt magna. Integer dignissim posuere suscipit. Vestibulum elementum dapibus arcu, a elementum dolor tristique a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent placerat cursus turpis, sed finibus eros hendrerit nec. Sed elementum erat sit amet est finibus convallis. Pellentesque turpis elit, ullamcorper vel molestie ac, ullamcorper sed nibh. Vivamus imperdiet placerat nunc ut tempor. Nunc quis sem id arcu ornare consectetur. </p>
+            </p>
+            <h3>Email:</h3>
+        <p><a href="mailto:filologiaangielskapjn@gmail.com">filologiaangielskapjn@gmail.com</a></p>
+
+        <h3>Social Media:</h3>
+        <p>Contact us on Github:  </p>
+        <a href="https://github.com/NLP-UG-2022-23" target="_blank" class="fa fa-github" id="github-logo"></a>
+   
+
+           
+          
+         
+          
+        
+        
         </section>
 
         <section id="about-the-tool" class="about-the-tool">
