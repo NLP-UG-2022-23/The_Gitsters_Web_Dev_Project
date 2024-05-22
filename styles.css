@@ -8,16 +8,11 @@ body {
     color: black;
 }
 
-.dark-mode {
-            background-color: #112879;
-            color: white;
-        }
+ul{
+	list-style: none;
+}
 
-.light-mode {
-            background-color: white;
-            color: black;
-        }
-
+/* Navbar */
 #navbar {
     display: flex;
     justify-content: space-around;
@@ -36,18 +31,6 @@ body {
     width: auto;
 }
 
-@media(max-width: 767px){
-    #home img.logo2{
-      width: 75%;
-      height: 35%;
-  }
-  }
-  @media(max-width: 574px){
-    #home img.logo2{
-      width: 75%;
-  }
-  }
-
 #navbar a {
     color: white;
     text-decoration: none;
@@ -60,6 +43,132 @@ body {
     background-color: var(--main-gray);
   }
 
+  @media (max-width: 768px) {
+    #navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        transition: top 0.3s;
+    }
+
+    #navbar a {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+
+    #navbar img.logo {
+        height: 80px;
+    }
+}
+
+/* mySidenav */
+#mySidenav div {
+    position: fixed;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 0 5px 5px 0;
+  }
+  
+#mySidenav div:hover {
+    left: 0;
+  }
+  
+#about {
+    top: 200px;
+    background-color: #112879;
+  }
+  
+#darkabout {
+    top: 200px;
+    background-color: white;
+  }
+  
+#btn {
+    background-color: #112879;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+  
+  }
+  
+#darkbtn {
+    background-color: white;
+    border: none;
+    color: #112879;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+#submit-button {
+    margin-bottom:20px;
+    width:110px;
+    height: 30px;
+}
+
+#feedback {
+    font-size: 200%;
+    text-align: center;
+ }
+ 
+#github-logo {
+     font-size: 60px;
+     margin-bottom: 100px;
+ }
+
+/* Habmurger */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #navbar a {
+        display: none;
+    }
+}
+
+/* Dark and light modes */
+.dark-mode {
+    background-color: #112879;
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+
+/* Home */
+@media(max-width: 767px){
+    #home img.logo2{
+      width: 75%;
+      height: 35%;
+  }
+  }
+  @media(max-width: 574px){
+    #home img.logo2{
+      width: 75%;
+  }
+  }
+
 .home {
     display: flex;
     flex-direction: column;
@@ -67,54 +176,6 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
-}
-
-#mySidenav div {
-  position: fixed; /* Position them relative to the browser window */
-  left: -80px; /* Position them outside of the screen */
-  transition: 0.3s; /* Add transition on hover */
-  padding: 15px; /* 15px padding */
-  width: 100px; /* Set a specific width */
-  text-decoration: none; /* Remove underline */
-  font-size: 20px; /* Increase font size */
-  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
-}
-
-#mySidenav div:hover {
-  left: 0; /* On mouse-over, make the elements appear as they should */
-}
-
-#about {
-  top: 200px;
-  background-color: #112879;
-}
-
-#darkabout {
-  top: 200px;
-  background-color: white;
-}
-
-#btn {
-  background-color: #112879;
-  border: none;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
-
-}
-
-#darkbtn {
-  background-color: white;
-  border: none;
-  color: #112879;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  cursor: pointer;
 }
 
 .home a {
@@ -135,7 +196,7 @@ body {
     height: 100vh;
 }
 
-
+/* About us */
 .about-us {
     display: flex;
     flex-direction: column;
@@ -151,6 +212,19 @@ body {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+}
+
+.about-us h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-top: 200px;
+}
+
+.about-us h3 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
 }
 
 *{
@@ -171,18 +245,16 @@ body {
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-ul{
-	list-style: none;
-}
+/* Footer */
 .footer{
-	/* background-color: #24262b; */
     background-color: #08174f;
     padding: 70px 0;
 }
+
 .footer-col{
-   /* width: 25%; */
    padding: 0 15px;
 }
+
 .footer-col h4{
 	font-size: 18px;
 	color: #ffffff;
@@ -191,6 +263,7 @@ ul{
 	font-weight: 500;
 	position: relative;
 }
+
 .footer-col h4::before{
 	content: '';
 	position: absolute;
@@ -200,9 +273,11 @@ ul{
 	box-sizing: border-box;
 	width: 110px;
 }
+
 .footer-col ul li:not(:last-child){
 	margin-bottom: 10px;
 }
+
 .footer-col ul li a{
 	font-size: 16px;
 	text-transform: capitalize;
@@ -213,10 +288,12 @@ ul{
 	display: block;
 	transition: all 0.3s ease;
 }
+
 .footer-col ul li a:hover{
 	color: #ffffff;
 	padding-left: 8px;
 }
+
 .footer-col .social-links a{
 	display: inline-block;
 	height: 40px;
@@ -229,12 +306,12 @@ ul{
 	color: #ffffff;
 	transition: all 0.5s ease;
 }
+
 .footer-col .social-links a:hover{
 	color: #24262b;
 	background-color: #ffffff;
 }
 
-/*responsive*/
 @media(max-width: 767px){
   .footer-col{
     width: 50%;
@@ -247,27 +324,8 @@ ul{
 }
 }
 
-#submit-button {
-    margin-bottom:20px;
-    width:110px;
-    height: 30px;
-}
-.about-us h1 {
-    text-align: center;
-    font-size: 40px;
-    /* color: white; */
-    margin-bottom: 20px;
-    margin-top: 200px;
-}
-
-.about-us h3 {
-    text-align: center;
-    font-size: 30px;
-    /* color: white; */
-    margin-top: 30px;
-}
+/* About the tool */
 .about-the-tool {
-    /* font-family: Arial, Helvetica, sans-serif; */
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
@@ -276,7 +334,6 @@ ul{
 .about-the-tool h1 {
     text-align: center;
     font-size: 40px;
-    /* color: white; */
     margin-bottom: 20px;
     margin-top: 200px;
 }
@@ -284,7 +341,6 @@ ul{
 .about-the-tool h3 {
     text-align: center;
     font-size: 30px;
-    /* color: white; */
     margin-top: 30px;
 }
 
@@ -306,59 +362,7 @@ ul{
     line-height: 1.5
 }
 
-#feedback {
-   font-size: 200%;
-   text-align: center;
-}
-
-/* New navbar */
-
-@media (max-width: 768px) {
-    #navbar {
-        flex-direction: column;
-        height: auto;
-        padding: 20px 0;
-        transition: top 0.3s;
-    }
-
-    #navbar a {
-        font-size: 1.2rem; /* Smaller font size */
-        padding: 0.8rem;
-    }
-
-    #navbar img.logo {
-        height: 80px; /* Smaller logo */
-    }
-}
-
-.hamburger {
-    display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
-
-    #navbar a {
-        display: none;
-    }
-}
-
-#github-logo {
-    font-size: 60px;
-    margin-bottom: 100px;
-}
-
-#feedback {
-    font-size: 200%;
-    text-align: center;
- }
- 
+/* Output */
  .output {
      border: 1px solid #ccc;
      height: 100px;
@@ -373,6 +377,7 @@ ul{
      margin-top: 0;
      margin-bottom: 20px;
  }
+
  .translation-header {
      margin-bottom: 10px;
      font-weight: bold;
@@ -397,7 +402,6 @@ ul{
   .tool h1 {
     text-align: center;
     font-size: 40px;
-    /* color: white; */
     margin-bottom: 20px;
     margin-top: 200px;
 }
