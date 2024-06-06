@@ -6,7 +6,7 @@ const output3 = document.getElementById("output3");
 
 function fetchFromFirst(strToTranslate, textToTranslate, targetLanguage, inputLanguage){
     
-    const apiKeyDeepL = 'a19cb280-568f-4a3d-8db0-1f1c1d18ae76:fx';
+    const apiKeyDeepL = 'KEY-PLACEHOLDER';
     const url = `https://api-free.deepl.com/v2/translate?auth_key=${apiKeyDeepL}&text=${encodeURIComponent(textToTranslate)}&target_lang=${targetLanguage}`;
     
     let lectiAILanguage = inputLanguage.toLowerCase()
@@ -20,7 +20,7 @@ function fetchFromFirst(strToTranslate, textToTranslate, targetLanguage, inputLa
             "from": lectiAILanguage
         }),
         headers: {
-            "X-API-Key": "NZZSYXX-4YGMDP3-J4JKSF7-5SK35F6",
+            "X-API-Key": "KEY-PLACEHOLDER",
             "Content-Type": "application/json",
             "Accept": "application/json"
           }
@@ -54,7 +54,7 @@ function fetchFromFirst(strToTranslate, textToTranslate, targetLanguage, inputLa
 
     const options = {
         method: 'POST',
-        headers: {accept: 'application/json', 'content-type': 'application/json', Authorization: 'a_TPRlbEUxkZiSAJiDtHWQk8rmUf4CuxSZPvGaBpvZOVXhF3pC69QVhpcGFx4Fzfcw6wnlmFffK0aBdiFM'},
+        headers: {accept: 'application/json', 'content-type': 'application/json', Authorization: 'KEY-PLACEHOLDER'},
         body: JSON.stringify({
           from: lingvaInputLanguage,
           to: lingvaTargetLanguage,
