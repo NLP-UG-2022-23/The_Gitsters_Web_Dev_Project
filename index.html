@@ -32,21 +32,34 @@
             <h1 style="text-align: center;" id="tool">Translation Tool</h1>
             <div class="container">
                 <form id="translationForm">
+                    <label for="languageSelect">Select Target Language:</label>
+                    <select id="languageSelect" name="languageSelect">
+                        <option value="DE">German</option>
+                        <option value="PL">Polish</option>
+                        <option value="EN">English</option>
+                    </select><br><br>
+
+                    <label for="inputLanguageSelect">Select Input Language:</label>
+                    <select id="inputLanguageSelect" name="inputLanguageSelect">
+                        <option value="DE">German</option>
+                        <option value="PL">Polish</option>
+                        <option value="EN">English</option>
+                    </select><br><br>
                     <label for="textInput">Enter text to translate:</label><br>
                     <textarea id="textInput" name="textInput" rows="15" cols="100"></textarea><br>
                     <input type="submit" value="Translate" id="submit-button">
                 </form>
-                <div class="translation-header">Translation 1</div>
+                <div class="translation-header">Lecto</div>
                 <div class="output" id="output1">
                     <p id="translationOutput1"></p>
                 </div>
         
-                <div class="translation-header">Translation 2</div>
+                <div class="translation-header">DeepL</div>
                 <div class="output" id="output2">
                     <p id="translationOutput2"></p>
                 </div>
         
-                <div class="translation-header">Translation 3</div>
+                <div class="translation-header">Lingvanex</div>
                 <div class="output" id="output3">
                     <p id="translationOutput3"></p>
                 </div>

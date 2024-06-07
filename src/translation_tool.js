@@ -4,16 +4,23 @@ const output1 = document.getElementById("output1");
 const output2 = document.getElementById("output2");
 const output3 = document.getElementById("output3");
 
-function fetchFromFirst(strToTranslate){
+function fetchFromFirst(strToTranslate, textToTranslate, targetLanguage, inputLanguage){
+    
+    const apiKeyDeepL = 'KEY-PLACEHOLDER';
+    const url = `https://api-free.deepl.com/v2/translate?auth_key=${apiKeyDeepL}&text=${encodeURIComponent(textToTranslate)}&target_lang=${targetLanguage}`;
+    
+    let lectiAILanguage = inputLanguage.toLowerCase()
+    console.log(lectiAILanguage)
+
     fetch("https://api.lecto.ai/v1/translate/text",{
         method: "POST",
         body: JSON.stringify({
             "texts": [strToTranslate],
-            "to": ["pl"],
-            "from": "en"
+            "to": [targetLanguage],
+            "from": lectiAILanguage
         }),
         headers: {
-            "X-API-Key": "GVNZATH-J1T4QAZ-KD4N46N-14NN783",
+            "X-API-Key": "KEY-PLACEHOLDER",
             "Content-Type": "application/json",
             "Accept": "application/json"
           }
@@ -25,16 +32,56 @@ function fetchFromFirst(strToTranslate){
         console.log(error);
         alert("Problem fetching from first!");
     });
+    
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        const translatedText = data.translations[0].text;
+        output2.innerText = translatedText;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("Problem fetching from DeepL!");
+    });
+
+    let lingvaTargetLanguage = `${targetLanguage.toLowerCase()}_${targetLanguage}`
+
+    let lingvaInputLanguage = 'en_GB'
+
+    if (inputLanguage != "EN"){
+        lingvaInputLanguage = `${inputLanguage.toLowerCase()}_${inputLanguage}`
+    }
+
+    const options = {
+        method: 'POST',
+        headers: {accept: 'application/json', 'content-type': 'application/json', Authorization: 'KEY-PLACEHOLDER'},
+        body: JSON.stringify({
+          from: lingvaInputLanguage,
+          to: lingvaTargetLanguage,
+          data: strToTranslate,
+          platform: 'api'
+        })
+      };
+      
+      fetch('https://api-b2b.backenster.com/b1/api/v3/translate', options)
+        .then(response => response.json())
+        .then(response => {
+            output3.innerText = response.result;
+        })
+        .catch(err => console.error(err));
 }
+
 
 translationForm.onsubmit = (event) => {
     event.preventDefault();
 
-    fetchFromFirst(textInput.value);
+    const textToTranslate = textInput.value;
+    const targetLanguage = document.getElementById('languageSelect').value;
+    const inputLanguage = document.getElementById('inputLanguageSelect').value;
+
+    fetchFromFirst(textInput.value, textToTranslate, targetLanguage, inputLanguage);
 
     output1.textContent = "";
     output2.textContent = "";
     output3.textContent = "";
-    output2.textContent = textInput.value
-    output3.textContent = textInput.value
 }
