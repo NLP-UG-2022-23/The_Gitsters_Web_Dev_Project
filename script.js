@@ -2,7 +2,8 @@
             let element = document.body;
             element.className = "dark-mode";
             document.getElementById("btn").onclick = lightMode;
-            document.getElementById("btn").innerText = "Light Mode";
+            document.getElementById('img_mode').src = 'light.png'
+            document.getElementById("btn").innerText = 'Light Mode';
             document.getElementById('about').id = 'darkabout';
             document.getElementById('btn').id = 'darkbtn';
         }
@@ -10,6 +11,7 @@
             let element = document.body;
             element.className = "light-mode";
             document.getElementById("darkbtn").onclick = darkMode;
+            document.getElementById('img_mode').src = 'dark.png'
             document.getElementById("darkbtn").innerText = "Dark Mode";
             document.getElementById('darkabout').id = 'about';
             document.getElementById('darkbtn').id = 'btn';
